@@ -1,0 +1,16 @@
+rails-api new -d postgresql -T backend-server
+rails g controller articles
+rails g model Article
+
+cross origin resource sharing (cors)  <-- MDN has a good resource on this
+"Headers access control" must be set
+XMLHTTPRequests = xhr
+
+Guard for testing
+Gem: betterErrors
+  - binding_of_caller gem too
+rails g rspec:install
+be rspec .
+
+Travis-ci.org
+livereload

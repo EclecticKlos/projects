@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Data Attributes 101</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Raleway:100|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header data-top="opacity: 1" data--400-top="opacity: 0">
+            <div class="wrapper clearfix">
+
+                <h1 class="title">Parallax Scrolling Master Class</h1>
+                <p>Hitting the Skrollr.js data-attributes right between the eyes!</p>
+
+            </div>
+        </header>
+        
+        <main>
+            <div id="profiles">
+                <div class="wrapper clearfix">
+
+                    <div class="boxer boxerA">
+                        <div class="boxerImg"></div>
+                        <h2>Amir <br />Khan</h2>
+                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
+                    </div>
+
+                    <div class="boxer boxerB">
+                        <div class="boxerImg"></div>
+                        <h2>Floyd <br />Mayweather</h2>
+                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="boxingRing">
+                <div class="wrapper clearfix">
+
+                    <div id="stage"></div>
+
+                </div>
+            </div>
+
+        </main><!-- /main -->
+        
+        <footer>
+            <div class="wrapper clearfix">
+                <p>&copy; 2014 Ihatetomatoes.net</p>
+            </div>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script type="text/javascript" src="js/skrollr.min.js"></script>
+        <script type="text/javascript">
+        var s = skrollr.init();
+        </script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,86 @@
+Queue feeds stack
+Async -- added to queue, when needed to run added to stack, run/executed, popped off stack
+
+function expression does not get hoisted (var x = function..)
+
+
+var doSomething = function(callback) {
+  console.log('1');
+
+  setTimeout(function() {
+    callback();
+  }, Math.floor((Math.random() *10) +1) *1000);
+}
+
+var doSomething2 = function(callback) {
+  console.log('2');
+
+  setTimeout(function() {
+    callback();
+  }, Math.floor((Math.random() *10) +1) *1000);
+}
+
+var doSomething3 = function(callback) {
+  console.log('3');
+}
+
+doSomething(function(){
+  doSomething2(function(){
+    doSomething3();
+  });
+});
+^^^Pyramid of hell
+
+Deferred object:
+- Consists of two constructs: deferred and promise
+
+Deferred
+- Manages ability to resolve and reject a step
+  - resolve: success (.done), reject: failure (allows rejection step)
+
+Promise
+- Manage our array of callbacks
+- Allows us to chain methods together (using .then())
+
+doSomething().then(doSomething2).then(doSomething3)
+
+Q = deferred object library
+.all
+.pipe
+.when
+
+
+var  test = function(fakeResponseCode){
+  var defer = new Defer();
+
+  setTimeout(function() {
+    if (fakeResponseCode === 200) {
+      defer.resolve(fakeResponseCode);
+    } else {
+      defer.reject(new Error("Status code was " + fakeResponseCode));
+    }
+  }, 1000);
+
+  return defer.promise;
+}
+
+console.log('test()');
+
+test(200).then(function(text) {
+  console.log(text);
+}, function(error) {
+  console.log(error.message);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
